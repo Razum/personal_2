@@ -1,0 +1,81 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { skills } from '../data/skills';
+---
+
+<section class="skills section" id="skills">
+  <div class="container">
+    <SectionHeading label="Skills" title="What I work with" />
+
+    <div class="skills__grid">
+      {skills.map((group, i) => (
+        <div
+          class="skills__group"
+          data-animate
+          data-delay={String(Math.min(i + 1, 3))}
+        >
+          <h3 class="skills__category">{group.category}</h3>
+          <ul class="skills__list" role="list">
+            {group.items.map((skill) => (
+              <li class="skills__pill">{skill}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .skills__category {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  .skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skills__pill {
+    padding: 0.4rem 1rem;
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--color-text);
+    border: 1px solid var(--color-accent-dim);
+    border-radius: 100px;
+    transition:
+      background-color var(--duration-fast) var(--ease-smooth),
+      border-color var(--duration-fast) var(--ease-smooth);
+    white-space: nowrap;
+  }
+
+  .skills__pill:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent);
+  }
+
+  @media (min-width: 768px) {
+    .skills__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .skills__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
