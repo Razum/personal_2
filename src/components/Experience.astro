@@ -43,9 +43,9 @@ import { experience } from '@/data/experience';
   .timeline::before {
     content: '';
     position: absolute;
-    left: 7px;
-    top: 8px;
-    bottom: 8px;
+    left: 0.5rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
     width: 1px;
     background: linear-gradient(
       to bottom,
@@ -86,8 +86,8 @@ import { experience } from '@/data/experience';
     grid-row: 1 / -1;
     display: flex;
     justify-content: center;
-    padding-top: 6px;
-    width: 15px;
+    padding-top: 0.5rem;
+    width: 1rem;
   }
 
   .timeline__dot {
@@ -123,16 +123,16 @@ import { experience } from '@/data/experience';
     color: var(--color-text-muted);
     line-height: 1.7;
     margin-top: var(--space-xs);
-    max-width: 540px;
+    max-width: 34rem;
   }
 
   @media (min-width: 1024px) {
     .timeline::before {
-      left: 200px;
+      left: 12.5rem;
     }
 
     .timeline__entry {
-      grid-template-columns: 185px auto 1fr;
+      grid-template-columns: 11.5rem auto 1fr;
       grid-template-rows: auto;
     }
 
@@ -144,6 +144,7 @@ import { experience } from '@/data/experience';
     }
 
     .timeline__marker {
+      padding-top: 0.875rem;
       grid-column: 2;
       grid-row: 1;
     }
