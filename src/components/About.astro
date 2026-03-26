@@ -1,5 +1,5 @@
 ---
-import SectionHeading from './SectionHeading.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
 
 const stats = [
   { value: '15+', label: 'Years in Development' },
@@ -16,7 +16,7 @@ const stats = [
       <div class="about__text" data-animate data-delay="1">
         <p>
           I'm Roman, a seasoned Front-End Developer based in Odesa, Ukraine,
-          with over 14 years of experience in planning, coding, testing, and
+          with over 15 years of experience in planning, coding, testing, and
           maintaining both websites and applications. My career has been defined
           by a continuous pursuit of excellence and innovation.
         </p>
@@ -152,7 +152,6 @@ const stats = [
     .about__sidebar {
       border-left: 1px solid var(--color-border);
       padding-left: var(--space-xl);
-      padding-top: calc(var(--space-xl) + var(--space-lg));
       gap: var(--space-xl);
     }
 
