@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import SectionHeading from '@/components/SectionHeading.astro';
+import photo from '@/assets/photo.png';
 
 const stats = [
   { value: '15+', label: 'Years in Development' },
@@ -15,36 +17,37 @@ const stats = [
 
       <div class="about__text" data-animate data-delay="1">
         <p>
-          I'm Roman, a seasoned Front-End Developer based in Odesa, Ukraine,
-          with over 15 years of experience in planning, coding, testing, and
-          maintaining both websites and applications. My career has been defined
-          by a continuous pursuit of excellence and innovation.
+          I'm Roman, a UI/UX Lead Developer based in Odesa, Ukraine, with over
+          15 years of experience designing and delivering high-quality digital
+          products. My work spans the full product lifecycle — from concept and
+          strategy to implementation and continuous improvement.
         </p>
         <p>
-          Throughout my professional journey, I have contributed to a diverse
-          range of projects — from small, bespoke websites to expansive, complex
-          web applications. I have collaborated with clients across the U.S.,
-          Norway, Germany, and Austria, delivering tailored solutions in
-          industries such as healthcare, fintech, entertainment, gaming,
-          telecommunications, and artificial intelligence.
+          Throughout my career, I've contributed to a wide range of projects,
+          from bespoke digital experiences to complex, large-scale platforms.
+          I've collaborated with clients across the U.S., Norway, Germany, and
+          Austria, delivering tailored solutions in industries including
+          healthcare, fintech, entertainment, gaming, telecommunications, and
+          artificial intelligence.
         </p>
         <p>
-          I approach each project with a commitment to thorough analysis,
-          ensuring that the best strategies and most appropriate toolsets are
-          selected. Whether working as part of a dynamic team or independently as
-          a lead developer, I pride myself on delivering high-quality results
-          even under the most challenging deadlines.
+          I approach each project with a strong focus on user experience,
+          product thinking, and execution quality. By aligning user needs with
+          business goals, I help create intuitive, scalable solutions that
+          deliver real impact. Whether leading a team or driving initiatives
+          independently, I consistently deliver results — even under demanding
+          timelines.
         </p>
       </div>
     </div>
 
     <aside class="about__sidebar">
       <div class="about__portrait" data-animate>
-        <img
-          src="/photo.png"
+        <Image
+          src={photo}
           alt="Roman Razumieienko"
-          width="400"
-          height="400"
+          width={400}
+          height={400}
           loading="lazy"
           decoding="async"
         />
